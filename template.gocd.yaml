@@ -1,11 +1,11 @@
 environments:
   example:
-    environment_variables:
-      EXAMPLE_DEPLOYMENT: testing
     pipelines:
       - build-ruby-docker-image
 pipelines:
   build-ruby-docker-image:
+    secure_variables:
+      DOCKER_HUB_PASSWORD: "MJBARMXn2eFO1Hlm69IdHQ=="
     group: default
     materials:
       ror:  # this is the name of material
@@ -20,5 +20,5 @@ pipelines:
                - exec:
                     command: bash
                     arguments:
-                      - "-e "
-                      - "./devops/docker-images/build_base_ruby_images.sh"
+                      - -e
+                      - ./devops/docker-images/build_base_ruby_images.sh
