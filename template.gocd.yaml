@@ -5,7 +5,7 @@ environments:
 pipelines:
   build-ruby-docker-image:
     secure_variables:
-      DOCKER_HUB_PASSWORD: "MJBARMXn2eFO1Hlm69IdHQ=="
+      DOCKER_HUB_PASSWORD: "mLNMaxQHsyeM2Wl8vmyCfQ=="
     group: default
     materials:
       ror:  # this is the name of material
